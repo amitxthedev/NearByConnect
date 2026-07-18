@@ -174,6 +174,16 @@ server {
         add_header Cache-Control "public, immutable";
     }
 
+    location = /robots.txt {
+        default_type text/plain;
+        add_header Cache-Control "public, max-age=86400";
+    }
+
+    location = /sitemap.xml {
+        default_type application/xml;
+        add_header Cache-Control "public, max-age=86400";
+    }
+
     location /api/ {
         proxy_pass http://127.0.0.1:8084;
         proxy_set_header Host $host;
