@@ -1,0 +1,22 @@
+{
+  "name": "NearbyConnect",
+  "short_name": "NearbyConnect",
+  "description": "Anonymous local communities. Connect with your city without revealing who you are.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#ec4899",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/tablogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/tablogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

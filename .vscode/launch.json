@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NearbyConnectApplication<nearbyconnect>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.nearbyconnect.NearbyConnectApplication",
+            "projectName": "nearbyconnect",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

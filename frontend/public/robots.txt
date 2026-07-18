@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /settings
+Disallow: /notifications
+Disallow: /onboarding
+Disallow: /login
+Disallow: /signup
+Disallow: /profile
+
+Sitemap: https://nearbyconnect.fun/sitemap.xml

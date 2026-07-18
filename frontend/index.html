@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/tablogo.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/tablogo.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#ec4899" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- SEO (defaults — overridden per-page by SEO component) -->
+    <title>NearbyConnect — Anonymous Local Communities</title>
+    <meta name="description" content="Connect with your city without revealing your identity. Join anonymous local communities for chat, events, and more." />
+    <link rel="canonical" href="https://nearbyconnect.fun/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NearbyConnect — Anonymous Local Communities" />
+    <meta property="og:description" content="Your City. Your People. Anonymous." />
+    <meta property="og:url" content="https://nearbyconnect.fun/" />
+    <meta property="og:site_name" content="NearbyConnect" />
+    <meta property="og:image" content="https://nearbyconnect.fun/tablogo.png" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NearbyConnect — Anonymous Local Communities" />
+    <meta name="twitter:description" content="Your City. Your People. Anonymous." />
+    <meta name="twitter:image" content="https://nearbyconnect.fun/tablogo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              ink: '#0a0a0a',
+              surface: '#fafafa',
+              muted: '#6b7280',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.7s ease-out forwards',
+              'slide-up': 'slideUp 0.7s ease-out forwards',
+              'phone-float': 'phoneFloat 6s ease-in-out infinite',
+              'grid-move': 'gridMove 20s linear infinite',
+              'marquee-left': 'marqueeLeft 30s linear infinite',
+              'marquee-right': 'marqueeRight 30s linear infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              phoneFloat: {
+                '0%, 100%': { transform: 'translateY(0px) rotate(-1deg)' },
+                '50%': { transform: 'translateY(-12px) rotate(1deg)' },
+              },
+              gridMove: {
+                '0%': { backgroundPosition: '0 0' },
+                '100%': { backgroundPosition: '40px 40px' },
+              },
+              marqueeLeft: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-33.333%)' },
+              },
+              marqueeRight: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(33.333%)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
