@@ -9,7 +9,7 @@ BRANCH="main"
 DB_NAME="nearbyconnect_dev"
 DB_USER="nearby"
 DB_PASS="nearby123"
-JWT_SECRET="nearbyconnect-jwt-secret-prod-2024"
+JWT_SECRET="ZmRvd2p0ODgyMTM1NjQ3ODkxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNA=="
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'

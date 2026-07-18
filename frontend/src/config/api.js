@@ -20,11 +20,13 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     const status = error.response?.status;
-    const url = error.request?.responseURL || '';
 
-    if (status === 401 || status === 403 || status === 302 || url.includes('/login')) {
-      localStorage.removeItem('token');
-      window.location.href = '/login';
+    if (status === 401 || status === 403) {
+      const currentPath = window.location.pathname;
+      if (currentPath !== '/login' && currentPath !== '/signup' && currentPath !== '/') {
+        localStorage.removeItem('token');
+        window.location.href = '/login';
+      }
     }
     return Promise.reject(error);
   }
