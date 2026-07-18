@@ -6,7 +6,7 @@ services:
     container_name: nearbyconnect-mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:nearbyconnect2024}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-nearbyconnect2024}
       MYSQL_DATABASE: nearbyconnect
     ports:
       - "3306:3306"
@@ -51,10 +51,10 @@ services:
       - DB_PORT=3306
       - DB_NAME=nearbyconnect
       - DB_USERNAME=root
-      - DB_PASSWORD=${DB_PASSWORD:nearbyconnect2024}
-      - JWT_SECRET=${JWT_SECRET:nearbyconnect-jwt-secret-change-in-production-2024}
-      - CORS_ORIGINS=${CORS_ORIGINS:*}
-      - WS_ORIGINS=${WS_ORIGINS:*}
+      - DB_PASSWORD=${DB_PASSWORD:-nearbyconnect2024}
+      - JWT_SECRET=${JWT_SECRET:-nearbyconnect-jwt-secret-change-in-production-2024}
+      - CORS_ORIGINS=${CORS_ORIGINS:-*}
+      - WS_ORIGINS=${WS_ORIGINS:-*}
     depends_on:
       mysql:
         condition: service_healthy
