@@ -100,7 +100,13 @@ export default function SearchPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO title="Search" description="Search for communities, people, and topics in your area." path="/search" />
+      <SEO
+        title="Search"
+        description="Search for anonymous communities, people, and topics in your area on NearbyConnect. Find local groups that match your interests."
+        path="/search"
+        index={false}
+        keywords="search communities, find people, local search, nearby groups"
+      />
       {/* Search Header */}
       <div className="bg-white border-b border-gray-100 sticky top-14 z-30">
         <div className="max-w-2xl mx-auto px-4 py-5">

@@ -339,7 +339,12 @@ export default function ChatPage() {
 
   return (
     <div className="flex h-[calc(100dvh-136px)] md:h-[calc(100dvh-80px)] bg-gray-50">
-      <SEO title="Chat" description="Anonymous real-time chat with your local community members." path="/chat" />
+      <SEO
+        title="Chat"
+        description="Anonymous real-time chat with your local community members. Send messages, share ideas, and connect privately."
+        path="/chat"
+        index={false}
+      />
       {/* Sidebar */}
       <div
         className={`w-full md:w-80 lg:w-96 bg-white border-r border-gray-100 flex flex-col ${

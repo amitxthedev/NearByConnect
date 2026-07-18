@@ -6,7 +6,21 @@ import SEO from '../components/seo/SEO';
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO title="Privacy Policy" description="NearbyConnect privacy policy. Learn how we protect your anonymous identity." path="/privacy" />
+      <SEO
+        title="Privacy Policy"
+        description="NearbyConnect privacy policy. Learn how we protect your anonymous identity and keep your data safe. No real names, emails, or GPS tracking required."
+        path="/privacy"
+        keywords="privacy policy, anonymous privacy, data protection, user privacy, nearbyconnect privacy"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Privacy Policy — NearbyConnect',
+          description: 'Learn how NearbyConnect protects your anonymous identity.',
+          url: 'https://nearbyconnect.fun/privacy',
+          datePublished: '2026-07-18',
+          dateModified: '2026-07-19',
+        }}
+      />
       <div className="max-w-3xl mx-auto px-5 py-12">
         <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gray-600 mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" />

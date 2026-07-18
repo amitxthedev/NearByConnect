@@ -7,5 +7,10 @@ Disallow: /onboarding
 Disallow: /login
 Disallow: /signup
 Disallow: /profile
+Disallow: /dashboard
+Disallow: /chat
+Disallow: /feed
+Disallow: /bookmarks
+Disallow: /post/
 
 Sitemap: https://nearbyconnect.fun/sitemap.xml

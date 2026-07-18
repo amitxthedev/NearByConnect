@@ -7,6 +7,7 @@ import { postApi, commentApi } from '../services/api';
 import { timeAgo } from '../utils/format';
 import useAppStore from '../stores/useAppStore';
 import Avatar from '../components/ui/Avatar';
+import SEO from '../components/seo/SEO';
 
 export default function PostDetailPage() {
   const { id } = useParams();
@@ -106,6 +107,12 @@ export default function PostDetailPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEO
+        title={post.title || 'Post'}
+        description={post.content?.substring(0, 160) || 'View this post on NearbyConnect anonymous community.'}
+        path={`/post/${id}`}
+        index={false}
+      />
       {/* Header */}
       <div className="sticky top-14 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-200/60">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center gap-3">

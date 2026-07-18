@@ -109,7 +109,7 @@ export default function SettingsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO title="Settings" description="Manage your NearbyConnect account settings." path="/settings" index={false} />
+      <SEO title="Settings" description="Manage your NearbyConnect account settings. Update your anonymous identity, city, notifications, and privacy preferences." path="/settings" index={false} />
       <div className="sticky top-14 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-200/60">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center gap-3">
           <button onClick={() => navigate('/dashboard')} className="p-2 -ml-2 rounded-xl hover:bg-gray-100 transition-colors">

@@ -6,6 +6,7 @@ import { ArrowLeft, TrendingUp, Clock, FileText } from 'lucide-react';
 import useAppStore from '../stores/useAppStore';
 import { postApi } from '../services/api';
 import PostCard from '../components/post/PostCard';
+import SEO from '../components/seo/SEO';
 
 const container = {
   hidden: { opacity: 0 },
@@ -40,6 +41,7 @@ export default function FeedPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO title="Feed" description="Discover trending and latest posts from your local anonymous communities on NearbyConnect." path="/feed" index={false} />
       <div className="sticky top-14 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-200/60">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center gap-3">
           <Link to="/dashboard" className="p-2 -ml-2 rounded-xl hover:bg-gray-100 transition-colors">

@@ -8,7 +8,7 @@ export default function NotFoundPage() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <SEO
         title="Page Not Found"
-        description="The page you're looking for doesn't exist or has been moved."
+        description="The page you're looking for doesn't exist or has been moved. Go back to NearbyConnect home page."
         path="/404"
         index={false}
       />

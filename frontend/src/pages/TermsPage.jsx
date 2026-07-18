@@ -6,7 +6,21 @@ import SEO from '../components/seo/SEO';
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO title="Terms of Service" description="NearbyConnect terms of service. Read our community guidelines and platform rules." path="/terms" />
+      <SEO
+        title="Terms of Service"
+        description="NearbyConnect terms of service. Read our community guidelines, platform rules, and user agreements for anonymous local communities."
+        path="/terms"
+        keywords="terms of service, community guidelines, platform rules, user agreement, nearbyconnect terms"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Terms of Service — NearbyConnect',
+          description: 'Community guidelines and platform rules for NearbyConnect.',
+          url: 'https://nearbyconnect.fun/terms',
+          datePublished: '2026-07-18',
+          dateModified: '2026-07-19',
+        }}
+      />
       <div className="max-w-3xl mx-auto px-5 py-12">
         <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gray-600 mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" />

@@ -15,8 +15,9 @@ export default function LandingPage() {
     <div className="min-h-[100dvh]">
       <SEO
         title={null}
-        description="Connect with your city without revealing your identity. Join anonymous local communities for chat, events, and more."
+        description="NearbyConnect lets you join anonymous local communities. Chat with neighbors, discover events, and connect with people in your city — all without revealing your identity."
         path="/"
+        keywords="anonymous community, local chat, neighborhood app, anonymous messaging, local events, nearby people, anonymous social network, city community"
         jsonLd={[
           {
             '@context': 'https://schema.org',

@@ -111,7 +111,19 @@ export default function CommunitiesPage() {
 
   return (
     <div className="bg-gray-50 overflow-x-hidden">
-      <SEO title="Communities" description="Browse and join anonymous local communities in your city." path="/communities" />
+      <SEO
+        title="Communities"
+        description="Browse and join anonymous local communities in your city. Discover groups based on your interests and location on NearbyConnect."
+        path="/communities"
+        keywords="local communities, anonymous groups, join community, nearby groups, interest-based communities"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Communities — NearbyConnect',
+          description: 'Browse and join anonymous local communities in your city.',
+          url: 'https://nearbyconnect.fun/communities',
+        }}
+      />
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-3 sm:px-6">

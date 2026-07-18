@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { postApi } from '../services/api';
 import PostCard from '../components/post/PostCard';
+import SEO from '../components/seo/SEO';
 
 const ArrowLeft = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
@@ -61,6 +62,7 @@ export default function BookmarksPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO title="Bookmarks" description="Access your saved posts from NearbyConnect communities. Quick access to content you found interesting." path="/bookmarks" index={false} />
       <div className="sticky top-14 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-200/60">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center gap-3">
           <Link to="/dashboard" className="p-2 -ml-2 rounded-xl hover:bg-gray-100 transition-colors">

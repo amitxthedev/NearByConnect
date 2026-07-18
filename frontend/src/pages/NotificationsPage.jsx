@@ -139,7 +139,12 @@ export default function NotificationsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-2xl mx-auto">
-        <SEO title="Notifications" description="View your latest notifications from NearbyConnect." path="/notifications" index={false} />
+        <SEO
+          title="Notifications"
+          description="View your latest notifications from NearbyConnect. Stay updated on community activity, messages, and interactions."
+          path="/notifications"
+          index={false}
+        />
         {/* Header */}
         <div className="bg-white border-b border-gray-100 sticky top-14 z-20">
           <div className="px-4 py-5 flex items-center justify-between">

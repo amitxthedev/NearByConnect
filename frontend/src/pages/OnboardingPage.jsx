@@ -108,7 +108,7 @@ export default function OnboardingPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <SEO title="Get Started" description="Set up your anonymous profile and discover local communities." path="/onboarding" index={false} />
+      <SEO title="Get Started" description="Set up your anonymous profile and discover local communities on NearbyConnect. Choose your city and interests." path="/onboarding" index={false} />
       {/* Top progress bar */}
       <div className="w-full px-6 pt-8">
         <div className="max-w-md mx-auto">

@@ -93,7 +93,12 @@ export default function ProfilePage() {
 
   return (
     <div className="bg-gray-50">
-      <SEO title="Profile" description="View your anonymous NearbyConnect profile." path="/profile" />
+      <SEO
+        title="Profile"
+        description="View and manage your anonymous NearbyConnect profile. Your identity stays private while you connect with local communities."
+        path="/profile"
+        index={false}
+      />
       {/* Profile Header */}
       <div className="relative bg-gradient-to-br from-pink-500 via-rose-500 to-fuchsia-600 overflow-hidden">
         <div className="absolute inset-0">

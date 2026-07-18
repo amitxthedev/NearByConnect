@@ -100,8 +100,18 @@ export default function DashboardPage() {
 
   return (
     <div className="px-3 sm:px-5 lg:px-8 py-4 sm:py-5 space-y-4 sm:space-y-5 max-w-2xl mx-auto">
-      <SEO title="Dashboard" description="Your NearbyConnect dashboard. See what's happening in your local communities." path="/dashboard" />
-
+      <SEO
+        title="Dashboard"
+        description="Your NearbyConnect dashboard. See what's happening in your local anonymous communities — trending groups, recent chats, and city stats."
+        path="/dashboard"
+        index={false}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: 'NearbyConnect Dashboard',
+          url: 'https://nearbyconnect.fun/dashboard',
+        }}
+      />
       {/* Welcome Banner */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}

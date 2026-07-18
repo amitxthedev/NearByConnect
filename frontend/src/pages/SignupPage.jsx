@@ -75,7 +75,7 @@ export default function SignupPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <SEO title="Sign Up" description="Create your anonymous account and start connecting with your local community." path="/signup" index={false} />
+      <SEO title="Sign Up" description="Create your anonymous account and start connecting with your local community. No email, no real name required." path="/signup" index={false} />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

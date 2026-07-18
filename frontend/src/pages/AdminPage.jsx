@@ -101,7 +101,7 @@ export default function AdminPage() {
 
   return (
     <div className="flex h-screen bg-gray-50">
-      <SEO title="Admin" description="NearbyConnect administration panel." path="/admin" index={false} />
+      <SEO title="Admin Panel" description="NearbyConnect administration and moderation panel." path="/admin" index={false} />
       {/* Sidebar */}
       <div className="w-64 bg-white border-r border-gray-100 flex flex-col">
         <div className="p-5 border-b border-gray-50">

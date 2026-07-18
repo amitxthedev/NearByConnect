@@ -43,7 +43,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <SEO title="Log In" description="Sign in to your NearbyConnect account and join your local anonymous community." path="/login" index={false} />
+      <SEO title="Log In" description="Sign in to your NearbyConnect account and join your local anonymous community. Secure anonymous login." path="/login" index={false} />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

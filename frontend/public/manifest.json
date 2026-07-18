@@ -1,12 +1,16 @@
 {
-  "name": "NearbyConnect",
+  "name": "NearbyConnect — Anonymous Local Communities",
   "short_name": "NearbyConnect",
-  "description": "Anonymous local communities. Connect with your city without revealing who you are.",
+  "description": "Anonymous local communities. Connect with your city without revealing who you are. Chat, discover events, and join local groups.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#fafafa",
   "theme_color": "#ec4899",
   "orientation": "portrait-primary",
+  "categories": ["social", "communication"],
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
       "src": "/tablogo.png",
