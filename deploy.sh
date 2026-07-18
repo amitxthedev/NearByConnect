@@ -23,6 +23,21 @@ fail() { echo -e "${RED}[FAIL]${NC} $1"; exit 1; }
 cd "$APP_DIR" || fail "Directory $APP_DIR not found"
 
 # ==================
+# 0. Pull latest code
+# ==================
+warn "Pulling latest code from GitHub..."
+git fetch origin "$BRANCH" 2>/dev/null || warn "Git fetch failed, using local code"
+LOCAL=$(git rev-parse HEAD 2>/dev/null || echo "")
+REMOTE=$(git rev-parse origin/$BRANCH 2>/dev/null || echo "")
+if [ "$LOCAL" != "$REMOTE" ] 2>/dev/null; then
+    git reset --hard "origin/$BRANCH"
+    git clean -fd
+    ok "Code updated from GitHub"
+else
+    ok "Already up to date"
+fi
+
+# ==================
 # 1. Install deps
 # ==================
 warn "Installing dependencies..."
