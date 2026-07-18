@@ -15,6 +15,7 @@ import com.nearbyconnect.repository.InterestRepository;
 import com.nearbyconnect.repository.UserRepository;
 import com.nearbyconnect.security.JwtTokenProvider;
 import com.nearbyconnect.service.AuthService;
+import com.nearbyconnect.service.RecaptchaService;
 import com.nearbyconnect.util.AnonymousNameGenerator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -40,10 +41,15 @@ public class AuthServiceImpl implements AuthService {
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
+    private final RecaptchaService recaptchaService;
 
     @Override
     @Transactional
     public AuthResponse register(RegisterRequest request) {
+        if (!recaptchaService.verify(request.getCaptchaToken())) {
+            throw new RuntimeException("Captcha verification failed");
+        }
+
         if (userRepository.existsByUsername(request.getUsername())) {
             throw new RuntimeException("Username already taken");
         }
@@ -86,6 +92,10 @@ public class AuthServiceImpl implements AuthService {
     @Override
     @Transactional(readOnly = true)
     public AuthResponse login(LoginRequest request) {
+        if (!recaptchaService.verify(request.getCaptchaToken())) {
+            throw new RuntimeException("Captcha verification failed");
+        }
+
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
         );

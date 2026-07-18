@@ -16,6 +16,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -27,7 +28,7 @@ export default function LoginPage() {
     setLoading(true);
     setError('');
     try {
-      const res = await userApi.login({ username: username.trim(), password });
+      const res = await userApi.login({ username: username.trim(), password, captchaToken });
       const { accessToken, user } = res.data;
       localStorage.setItem('token', accessToken);
       setUser(user);
@@ -95,7 +96,7 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <Captcha onVerify={setCaptchaVerified} />
+          <Captcha onVerify={(token) => { setCaptchaVerified(!!token); setCaptchaToken(token); }} />
 
           <button
             type="submit"

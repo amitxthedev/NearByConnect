@@ -15,4 +15,5 @@ public class RegisterRequest {
     private String password;
     private Long cityId;
     private List<Long> interestIds;
+    private String captchaToken;
 }

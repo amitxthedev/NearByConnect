@@ -20,6 +20,7 @@ export default function SignupPage() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -56,6 +57,7 @@ export default function SignupPage() {
         password,
         cityId: selectedCity?.id || null,
         interestIds,
+        captchaToken,
       });
       const { accessToken, user } = res.data;
       localStorage.setItem('token', accessToken);
@@ -154,7 +156,7 @@ export default function SignupPage() {
               )}
             </div>
 
-            <Captcha onVerify={setCaptchaVerified} />
+            <Captcha onVerify={(token) => { setCaptchaVerified(!!token); setCaptchaToken(token); }} />
 
             <button
               type="submit"
