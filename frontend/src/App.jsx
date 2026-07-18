@@ -36,11 +36,11 @@ function LoadingSpinner() {
 
 function AppShell() {
   return (
-    <div className="min-h-screen bg-[#fafafa]">
+    <div className="min-h-screen bg-[#fafafa] overflow-hidden">
       <Navbar />
-      <div className="flex">
+      <div className="flex w-full max-w-full">
         <Sidebar />
-        <main className="flex-1 lg:ml-64 pt-14 pb-20 md:pb-6 min-h-screen">
+        <main className="flex-1 min-w-0 w-full lg:ml-64 pt-14 pb-20 md:pb-6">
           <Suspense fallback={<LoadingSpinner />}>
             <Outlet />
           </Suspense>
