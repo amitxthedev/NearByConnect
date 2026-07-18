@@ -18,7 +18,14 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of(allowedOrigins.split(",")));
+        String[] origins = allowedOrigins.split(",");
+        if (origins.length == 1 && origins[0].trim().equals("*")) {
+            config.addAllowedOriginPattern("*");
+        } else {
+            for (String origin : origins) {
+                config.addAllowedOrigin(origin.trim());
+            }
+        }
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
