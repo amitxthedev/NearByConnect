@@ -69,11 +69,13 @@ export default function App() {
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/communities" element={<CommunitiesPage />} />
+          <Route path="/communities/:id" element={<CommunityDetailPage />} />
+          <Route path="/search" element={<SearchPage />} />
 
           <Route element={<AuthGuard />}>
             <Route element={<AppShell />}>
               <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/communities" element={<CommunitiesPage />} />
               <Route path="/community/:id" element={<CommunityDetailPage />} />
               <Route path="/chat" element={<ChatPage />} />
               <Route path="/chat/:roomId" element={<ChatPage />} />
